@@ -1,0 +1,105 @@
+import { Link } from "react-router-dom";
+import { KeyRound } from "lucide-react";
+import { Mail } from "lucide-react";
+
+export default function Login() {
+  return (
+    <>
+      <div className='bg-purple-50/80 md:grid md:h-screen md:w-screen md:place-items-center md:bg-[url("/circle.svg")] md:bg-cover md:bg-center md:bg-no-repeat md:px-5'>
+        <div className="max-w-[60rem] bg-white md:flex md:w-full md:items-center md:justify-center md:border md:shadow-[0px_0px_5px_0px_#D1D5DB]">
+          <div className="flex min-h-screen w-full flex-col items-center gap-10 pt-10 md:mt-0 md:min-h-full md:w-1/2 md:justify-center md:pt-0">
+            <div className="max-w-[10rem] md:hidden">
+              <img
+                src="https://cdn.printshoppy.com/image/catalog/v6/svg/printshoppy-logo.svg"
+                alt="Logo"
+              />
+            </div>
+            <form
+              // onSubmit={handeSubmit}
+              autoComplete="off"
+              className="relative z-50 w-full max-w-[20.5rem] before:absolute before:-left-2.5 before:-top-2.5 before:-z-10 before:h-full before:w-full before:rounded-md before:border-2 before:border-purple-200 md:max-w-full md:before:hidden"
+            >
+              <div className="absolute -bottom-2.5 -right-2.5 -z-10 h-full w-full rounded-md border-2 border-purple-200 md:hidden"></div>
+
+              <div className="rounded-md bg-white p-3 py-5 shadow-[0px_0px_5px_0px_#D1D5DB] md:rounded-none md:px-10 md:shadow-none">
+                <h2 className="text-center text-xl font-medium md:text-2xl">
+                  LogIn to Your Dashboard
+                </h2>
+                <p className="pt-0.5 text-center text-[15px] text-gray-500">
+                  Secure access for authorized users only !!
+                </p>
+                <div className="space-y-6 pt-5">
+                  <label className="flex items-center gap-3 border-b-[0.5px] py-1 text-[15px]">
+                    <Mail strokeWidth={1.2} size={22} color="gray" />
+                    <input
+                      type="email"
+                      name="email"
+                      autoComplete="off"
+                      required
+                      className="w-full outline-none placeholder:text-gray-400/80"
+                      placeholder="Enter Your Email"
+                    />
+                  </label>
+                  <label className="flex items-center gap-3 border-b-[0.5px] py-1 text-[15px]">
+                    <KeyRound strokeWidth={1.2} size={22} color="gray" />
+                    <input
+                      type="Password"
+                      name="password"
+                      minLength={8}
+                      required
+                      autoComplete="off"
+                      className="w-full outline-none placeholder:text-gray-400/80"
+                      placeholder="Enter your Password"
+                    />
+                  </label>
+                </div>
+                <div className="mt-4 text-[15px]">
+                  <Link to="/reset-password" className="text-blue-900">
+                    Forgot your password?
+                  </Link>
+                </div>
+                <div className="mt-4 flex flex-col items-center gap-3 text-[15px]">
+                  <button
+                    type="submit"
+                    className="w-full rounded-full bg-purple-700 py-2 font-medium uppercase tracking-wider text-white md:w-[80%]"
+                  >
+                    <Link to="/">LogIn</Link>
+                  </button>
+                  <div className="relative z-10 my-2 w-full text-center text-gray-500 before:absolute before:left-0 before:top-1/2 before:-z-10 before:h-[1px] before:w-full before:translate-y-1/2 before:rounded-full before:bg-gray-400 md:my-3">
+                    <span className="bg-white px-1.5">Or Continue with</span>
+                  </div>
+                  <button
+                    type="button"
+                    className="flex w-full items-center justify-center gap-1.5 rounded-full border-[0.9px] border-gray-400 py-2 font-medium uppercase tracking-wider md:w-[80%]"
+                  >
+                    <img
+                      src="/google.svg"
+                      alt="Google"
+                      className="max-w-[1.1rem]"
+                    />
+                    Google
+                  </button>
+                </div>
+                <p className="pb-1.5 pt-6 text-center text-[15px]">
+                  Don't have an account?
+                  <span className="pl-1.5 tracking-wider text-blue-900">
+                    <Link to="/register">Register</Link>
+                  </span>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div className="hidden w-[50%] bg-white md:block md:border-l-[0.5px] md:border-gray-200/70">
+            <img
+              src="https://cdn.printshoppy.com/image/catalog/v6/svg/printshoppy-logo.svg"
+              alt="Registration"
+              className="mx-auto mt-10 max-w-[10rem]"
+            />
+            <img src="./login.svg" alt="Registration" />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

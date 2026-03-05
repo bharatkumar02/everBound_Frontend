@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Lorem ipsum dolor Lorem ipsum dolor sit amet.",
+    "image": "/images/f-4.jpg",
+    "oldPrice": 15.99,
+    "newPrice": 12.99,
+    "quantity": 5
+  },
+  {
+    "id": 2,
+    "title": "Lorem ipsum dolor Lorem ipsum dolor sit amet.",
+    "image": "/images/f-1.jpg",
+    "oldPrice": 15.99,
+    "newPrice": 12.99,
+    "quantity": 5
+  },
+  {
+    "id": 3,
+    "title": "Lorem ipsum dolor Lorem ipsum dolor sit amet.",
+    "image": "/images/f-2.jpg",
+    "oldPrice": 15.99,
+    "newPrice": 12.99,
+    "quantity": 5
+  },
+  {
+    "id": 4,
+    "title": "Lorem ipsum dolor Lorem ipsum dolor sit amet.",
+    "image": "/images/f-5.jpg",
+    "oldPrice": 15.99,
+    "newPrice": 12.99,
+    "quantity": 5
+  },
+  {
+    "id": 5,
+    "title": "Lorem ipsum dolor Lorem ipsum dolor sit amet.",
+    "image": "/images/f-6.jpg",
+    "oldPrice": 15.99,
+    "newPrice": 12.99,
+    "quantity": 5
+  }
+]

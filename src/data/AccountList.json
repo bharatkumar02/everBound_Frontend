@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Account Settings",
+    "to": "/customer/myprofile",
+    "icon": "UserPen",
+    "description": "Update your profile info."
+  },
+  {
+    "label": "Orders",
+    "to": "/customer/orders",
+    "icon": "ShoppingBag",
+    "description": "View and manage your orders status."
+  },
+  {
+    "label": "Wishlist",
+    "to": "/customer/wishlist",
+    "icon": "Heart",
+    "description": "Save items you love."
+  },
+  {
+    "label": "Address",
+    "to": "/customer/addresses",
+    "icon": "MapPinned",
+    "description": "Add an address for smooth delivery."
+  },
+  {
+    "label": "Referrals",
+    "to": "/customer/referrals",
+    "icon": "HandCoins",
+    "description": "Invite and earn with each referral."
+  }
+]
