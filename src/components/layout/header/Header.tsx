@@ -11,7 +11,7 @@ function Header() {
         </div>
 
         {/* Header for Large Screen from lg to ... */}
-        <div className='hidden min-[1280px]:block lg:sticky'>
+        <div className='hidden min-[1280px]:block'>
           <LgHeader />
         </div>
       </header>

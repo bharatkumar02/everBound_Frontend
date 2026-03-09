@@ -5,28 +5,28 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const productList = [
   {
-    img: '/public/images/img-63.jpg',
-    name: 'T-Shirts',
+    img: 'https://static-assets-prod.fnp.com/images/pr/l/v20250715223135/love-forever-red-rose-bouquet_1.jpg',
+    name: 'Flower Bouquets',
     title: 'Trending',
   },
   {
-    img: '/public/images/img-62.jpg',
-    name: 'Phone Case',
+    img: 'https://static-assets-prod.fnp.com/images/pr/l/v300/heart-of-red-roses-truffle-cake-half-kg_1.jpg',
+    name: 'Heart Shape Cake',
     title: 'New Arrival',
   },
   {
-    img: '/public/images/img-69.jpg',
-    name: 'Acrylic Frames',
+    img: 'https://static-assets-prod.fnp.com/images/pr/l/v300/money-plant-mason-jar-terrarium_2.jpg',
+    name: 'Money Plant',
     title: 'Gifts',
   },
   {
-    img: '/public/images/f-1.jpg',
-    name: 'Photo Books',
+    img: 'https://static-assets-prod.fnp.com/images/pr/l/v300/red-roses-bouquet-dairy-milk-chocolates_1.jpg',
+    name: 'Choclate & Flower',
     title: 'For Couples',
   },
   {
-    img: '/public/images/img-63.jpg',
-    name: 'Office Stationary',
+    img: 'https://static-assets-prod.fnp.com/images/pr/l/v20250417014714/floral-n-nutty-hamper-for-mom_1.jpg',
+    name: 'Dry Fruits Hamper',
     title: 'Trending',
   },
 ];

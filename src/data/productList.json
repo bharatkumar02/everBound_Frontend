@@ -1,684 +1,269 @@
 [
   {
     "id": 1,
-    "productCategory": "View All",
-    "link": "See all items",
+    "productCategory": "Flowers & Bouquets",
+    "link": "See all Flowers & Bouquets",
     "CategoryList": [
       {
-        "subCategory": "Business Essentials",
+        "subCategory": "Floral Type",
         "subCategoryList": [
-          "Visiting Cards",
-          "Signs & Marketing Materials",
-          "Stationery",
-          "Labels & Packaging",
-          "Stamps & Ink",
-          "Office Supplies"
+          "Roses",
+          "Mixed Flowers",
+          "Carnations",
+          "Exotic Flowers",
+          "Orchids",
+          "Gerberas",
+          "Lilies"
         ]
       },
       {
-        "subCategory": "New Looks",
+        "subCategory": "Blossom Arrangement",
         "subCategoryList": [
-          "Clothing",
-          "Caps & Bags",
-          "Polo T-shirts",
-          "Office Shirts",
-          "Safety Vest"
-        ]
-      },
-      {
-        "subCategory": "Made by You",
-        "subCategoryList": [
-          "Photo Albums",
-          "Personalised Pens",
-          "Magnets",
-          "Notebooks & Diaries",
-          "Calendars"
-        ]
-      },
-      {
-        "subCategory": "Home & Gifts",
-        "subCategoryList": [
-          "Mugs",
-          "Albums & Gifts",
-          "Drinkware",
-          "Mugs",
-          "Gift Hampers"
-        ]
-      },
-      {
-        "subCategory": "Design & Logo",
-        "subCategoryList": [
-          "Design Services",
-          "Logo Maker",
-          "QR Code",
-          "Ideas & Advice"
-        ]
-      },
-      {
-        "subCategory": "Looking More?",
-        "subCategoryList": [
-          "Technology",
-          "Invitations",
-          "Announcements",
-          "Weddings",
-          "Passport Size Photo"
+          "Luxe Flowers",
+          "Flower Arrangement",
+          "Flower Bouquets",
+          "Red",
+          "Pink"
         ]
       }
     ]
   },
   {
     "id": 2,
-    "productCategory": "Visiting Cards",
-    "link": "See all Visiting Cards",
+    "productCategory": "Personalized Acrylics",
+    "link": "See all Personalised Acrylics",
     "CategoryList": [
       {
-        "subCategory": "Visiting Cards",
+        "subCategory": "Gifts in spotlight",
+        "subCategoryList": ["Mugs", "Photo Frames", "Clocks"],
+        "newSubCategoryList": ["Name Plates", "Water Bottles"]
+      },
+      {
+        "subCategory": "Trending",
         "subCategoryList": [
-          "Standard Visiting Cards",
-          "Classic Visiting Cards",
-          "Rounded Corner Visiting Cards",
-          "Square Visiting Cards"
-        ],
-        "newSubCategoryList": [
-          "Leaf Visiting Cards",
-          "Oval Visiting Cards",
-          "Circle Visiting Cards"
+          "T-Shirt",
+          "Perfumes",
+          "Bar Accessories",
+          "Glass Ware",
+          "Keychains"
         ]
-      },
-      {
-        "subCategory": "Digital Visiting Cards",
-        "subCategoryList": [
-          "QR Code Visiting Cards",
-          "NFC Visiting Cards",
-          "Vrilliant Finishes"
-        ]
-      },
-      {
-        "subCategory": "Brilliant Finishes",
-        "subCategoryList": [
-          "Spot VU Visiting Cards",
-          "Raised Foil Visiting Cards"
-        ]
-      },
-      {
-        "subCategory": "Standard Papers",
-        "subCategoryList": [
-          "Glossy Visiting Cards",
-          "Matte Visiting Cards",
-          "Bulk Visiting Cards"
-        ]
-      },
-      {
-        "subCategory": "Speciality Cards",
-        "subCategoryList": [
-          "Magnetic Visiting Cards",
-          "Transparent Visiting Cards"
-        ]
-      },
-      {
-        "subCategory": "Premium Papers",
-        "subCategoryList": [
-          "Premium Plus Visiting Cards",
-          "Non-Tearable Visiting Cards",
-          "Velvet Touch Visiting Cards"
-        ],
-        "newSubCategoryList": [
-          "Pearl Visiting Cards",
-          "Kraft Visiting Cards",
-          "Diamond Visiting Cards"
-        ]
-      },
-      {
-        "subCategory": "Design & Logo",
-        "subCategoryList": [],
-        "newSubCategoryList": ["Design Services", "Logo Maker"]
-      },
-      {
-        "subCategory": "Visiting Cards Holder",
-        "subCategoryList": [
-          "Engraved Metal Visiting Card Holders",
-          "Metal Visiting Card Holder",
-          "Leatherite Visiting Cards Holder"
-        ],
-        "newSubCategoryList": ["Premium Metal Card Holders"]
       }
     ]
   },
   {
     "id": 3,
-    "productCategory": "Stanionery",
-    "link": "See all Stanioneries",
+    "productCategory": "Soft Toys & Teddies",
+    "link": "See all Soft Toys & Teddies",
     "CategoryList": [
       {
-        "subCategory": "Custom Stationery",
+        "subCategory": "Giant Teddy Bears",
         "subCategoryList": [
-          "Letterheads",
-          "Letterhead Pads",
-          "Bill Books",
-          "Envelopes",
-          "Mouse Pads",
-          "Bulk Letterheads",
-          "Laptop Skins"
+          "3 Feet Life-Size Bears",
+          "5 Feet Giant Teddies",
+          "Jumbo Cuddle Pandas"
+        ]
+      },
+      {
+        "subCategory": "Themed Soft Toys",
+        "subCategoryList": [
+          "I Love You Teddies",
+          "Graduation Plushies",
+          "Newborn Baby Plush Sets",
+          "Couple Teddy Sets"
         ],
-        "newSubCategoryList": ["Envelope Seals", "Pen Drive"]
-      },
-      {
-        "subCategory": "Office Supplies",
-        "subCategoryList": [
-          "Lanyards",
-          "ID Cards",
-          "Invoice Books",
-          "Note Cards",
-          "Custom Certificates",
-          "Awards",
-          "Coasters",
-          "Employee Kit",
-          "Cash Vouchers",
-          "Paper Identity Card"
-        ]
-      },
-      {
-        "subCategory": "Custom Notebooks",
-        "subCategoryList": ["Notebooks", "Bound Notebooks", "Writing Pads"],
-        "newSubCategoryList": ["Notebook A4 Size"]
-      },
-      {
-        "subCategory": "Customised Diaries",
-        "subCategoryList": [
-          "Diary with Pen Holder",
-          "A5 Diary",
-          "Diary with Magnetic Lock",
-          "Diary with Strap"
-        ]
-      },
-      {
-        "subCategory": "Wedding Stationery",
-        "subCategoryList": [
-          "Wedding Invitations",
-          "Date Cards",
-          "Wedding Menu",
-          "Wedding Programmes"
-        ]
-      },
-      {
-        "subCategory": "Invitations & Announcements",
-        "subCategoryList": [
-          "Thankyou Cards",
-          "Birthday Invitations",
-          "Party Invitations",
-          "Moving Announcements"
-        ]
-      },
-      {
-        "subCategory": "Files & Folders",
-        "subCategoryList": [
-          "Presentation Folders",
-          "Ring Binder File",
-          "Presentation File with Pocket"
-        ]
-      },
-      {
-        "subCategory": "Custom Keychains",
-        "subCategoryList": [
-          "Keychain with Light",
-          "Acrylic Keychains",
-          "Oval Metal Keychains"
-        ]
-      },
-      {
-        "subCategory": "New Arrivals",
-        "subCategoryList": [
-          "Classic Diary",
-          "Office Stationary Kit",
-          "Custom Long Notebook",
-          "Business Envelopes"
-        ],
-        "newSubCategoryList": [
-          "Worldview 2026 Leather Diary",
-          "Gold Foil Wedding Invitations",
-          "Photo Keychains",
-          "Mouse Pad with Wrist Support"
-        ]
+        "newSubCategoryList": ["Personalized Name Teddies"]
       }
     ]
   },
   {
     "id": 4,
-    "productCategory": "Singns & Marketing Mterials",
+    "productCategory": "Cakes & Chocolates",
     "link": "See all Singns & Marketing Mterials",
     "CategoryList": [
       {
-        "subCategory": "Sings & Posters",
+        "subCategory": "Yummy Treats",
         "subCategoryList": [
-          "Standees",
-          "Posters",
-          "Bulk Posters",
-          "Banners",
-          "Tablettop Standees",
-          "Foam Boards",
-          "Tablettop Signs",
-          "Tent Cards",
-          "Shop all Signs & Posters"
+          "Heart Shaped Cakes",
+          "Fondant Cakes",
+          "Jar Cakes",
+          "Photo Cakes",
+          "Egless Cakes"
         ]
       },
       {
-        "subCategory": "Marketing Materials",
+        "subCategory": "By Brands",
         "subCategoryList": [
-          "Flyers",
-          "Presentation Folders",
-          "Brouchures",
-          "Booklets",
-          "Bulk Flyers",
-          "Canvas Rolls",
-          "Custom Mouse Pads",
-          "Custom Bookmarks",
-          "Postcards"
+          "Cadbury",
+          "Kitkat Choclates",
+          "Artisanal Chocolates",
+          "Ferrero Rocher"
         ]
-      },
-      {
-        "subCategory": "More in Signs",
-        "subCategoryList": [
-          "Acrylic signs",
-          "Outdoor Signs",
-          "Plastic Signboards",
-          "Board Signs",
-          "Magnetic Signs",
-          "Exit Signs",
-          "Women's Restroom Signs",
-          "Men's Restroom Signs",
-          "Canvas Signs"
-        ]
-      },
-      {
-        "subCategory": "More in Marketing",
-        "subCategoryList": [
-          "Custom Car Door Decals",
-          "Door Hangers",
-          "Danglers",
-          "Menu Cards",
-          "Rate Cards",
-          "Loyalty Cards",
-          "Custom Gifts Certificates",
-          "Button Badges",
-          "Paper Bags",
-          "Custom Keychains"
-        ]
-      },
-      {
-        "subCategory": "Table Coverings",
-        "subCategoryList": [
-          "Custom Tablecloths",
-          "Table Runners",
-          "Table Mats",
-          "Place Mats"
-        ]
-      },
-      {
-        "subCategory": "New Arrivals",
-        "subCategoryList": ["Bulk Brochures", "Bulk Booklets"],
-        "newSubCategoryList": ["Raised Foil Postcards", "LED Display Stands"]
-      },
-      {
-        "subCategoryImg": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav%20Tiles/Stamps/Self-Inking-Stamps",
-        "subCategorytext": "Stationary, Awards, Trophies, Market Business and much more "
       }
     ]
   },
+
   {
     "id": 5,
-    "productCategory": "Stamps & Ink",
-    "link": "See all Stamps & Ink",
+    "productCategory": "Greeting Cards",
+    "link": "See all Cards",
     "CategoryList": [
       {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav%20Tiles/Stamps/Self-Inking-Stamps",
-        "categoryName": "Self Inking Stamps",
-        "categoryDescription": "Same Day Delivery Mumbai, Pune Y Bangalore"
+        "subCategory": "By Sentiment",
+        "subCategoryList": [
+          "Birthday Cards",
+          "Anniversary Cards",
+          "Thank You Notes",
+          "Get Well Soon",
+          "Apology Cards"
+        ]
       },
       {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav/Stamps/Basic-Rubber-Stamps",
-        "categoryName": "Basic Rubber Stamps",
-        "categoryDescription": "Same Day Delivery Mumbai, Pune"
-      },
-      {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav%20Tiles/Stamps/Pocket-Stamps",
-        "categoryName": "Pocket Stamps",
-        "categoryDescription": "Same Day Delivery Mumbai"
-      },
-      {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav%20Tiles/Stamps/Signature-Stamps",
-        "categoryName": "Signature Stamps",
-        "categoryDescription": "Same Day Delivery Mumbai, Pune Y Bangalore"
-      },
-      {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Stamps/seal_press_stamps",
-        "categoryName": "Paper Embosser",
-        "categoryDescription": "Same Day Delivery Mumbai"
+        "subCategory": "Unique Formats",
+        "subCategoryList": [
+          "3D Pop-up Cards",
+          "Musical Greeting Cards",
+          "Giant Oversized Cards",
+          "Handmade Quilled Cards"
+        ],
+        "newSubCategoryList": ["Custom Photo Cards"]
       }
     ]
   },
   {
     "id": 6,
-    "productCategory": "Labels & Packaging",
-    "link": "See all Products",
+    "productCategory": "Curated Hampers",
+    "link": "See all Corporate Gifts",
     "CategoryList": [
       {
-        "subCategory": "Custom Packaging",
+        "subCategory": "Thoughtfully Curted Gifts",
         "subCategoryList": [
-          "Mailer Bags",
-          "Corrugated Shipping Boxes",
-          "Packaging Sleeves",
-
-          "Rigid Boxes"
+          "All Gift Hampers",
+          "Healthy Hampers",
+          "Snacks Hampers",
+          "Grooming Hampers",
+          "Dry Fruit Hampers"
         ],
-        "newSubCategoryList": ["Eco-friendly Shopping Bags"]
+        "newSubCategoryList": ["Choclate Hampers"]
       },
       {
-        "subCategory": "Custom Stickers",
-        "subCategoryList": ["Sheet Stickers", "Roll Stickers", "Foil Stickers"],
-        "newSubCategoryList": [
-          "Die-Cut Stickers",
-          "Holographic Stickers",
-          "Waterproof Stickers"
-        ]
-      },
-      {
-        "subCategory": "Custom Labels",
+        "subCategory": "Floral Gift Sets",
         "subCategoryList": [
-          "Product Labels",
-          "Jar Labels",
-
-          "Clothing Care Labels",
-          "Serial Number Labels",
-          "Barcode Labels",
-          "Warning Labels"
-        ]
-      },
-      {
-        "subCategory": "Tags",
-        "subCategoryList": [
-          "Hang Tags",
-          "Clothing Tags",
-          "Price Tags",
-          "Luggage Tags"
-        ]
-      },
-      {
-        "subCategory": "Packaging Boxes",
-        "subCategoryList": ["Cake Boxes"],
-        "newSubCategoryList": ["Snack Boxes", "Parcel Boxes"]
-      },
-
-      {
-        "subCategory": "Tapes & Wrapping Essentials",
-        "subCategoryList": [
-          "Printed Adhesive Tapes",
-          "Clear Packing Tape",
-          "Masking Tape",
-          "Custom Ribbons",
-          "Gift Wrap Sheets"
-        ]
-      },
-      {
-        "subCategory": "Security & Logistics Seals",
-        "subCategoryList": ["Tamper Evident Seals", "Security Void Labels"],
-        "newSubCategoryList": [
-          "Courier Seals",
-          "Fragile Stickers",
-          "Warning & Safety Signs"
+          "Flowers & Cakes",
+          "Flowers & Choclates",
+          "Flowers & Plants"
         ]
       }
     ]
   },
   {
     "id": 7,
-    "productCategory": "Corporate Gifts",
-    "link": "See all Corporate Gifts",
+    "productCategory": "Corporate Bulk Gifts",
+    "link": "See all Corporate",
     "CategoryList": [
       {
-        "subCategory": "Premium Gifts",
+        "subCategory": "Welcome Kits",
         "subCategoryList": [
-          "Luxury Pens",
-          "Premium Leather Notebooks",
-          "Custom Designer Watches",
-          "Crystal Trophies",
-          "Premium Desk Organizers"
-        ],
-        "newSubCategoryList": [
-          "Gold Plated Keychains",
-          "Leather Travel Wallets",
-          "Elegant Gift Hampers"
+          "Employee Onboarding Sets",
+          "Branded Stationery Kits",
+          "Laptop Sleeves & Tech Bags"
         ]
       },
       {
-        "subCategory": "Eco-Friendly Gifts",
+        "subCategory": "Executive Gifts",
         "subCategoryList": [
-          "Bamboo Flask Bottles",
-          "Eco Stationery Kits",
-          "Plantable Notebooks",
-          "Seed Paper Cards",
-          "Wooden Tabletop Gifts",
-          "Reusable Cloth & Jute Bags",
-          "Bamboo Cutlery Sets"
-        ],
-        "newSubCategoryList": ["Organic Tea Hampers"]
-      },
-      {
-        "subCategory": "Tech Gifts",
-        "subCategoryList": [
-          "Smart Water Bottles",
-          "Wireless Bluetooth Speakers",
-          "Power Banks",
-          "Fast Charging Cables",
-          "Wireless Earbuds",
-          "USB Flash Drives",
-          "Smart Desk Lamps",
-          "Webcams & Headsets"
-        ]
-      },
-      {
-        "subCategory": "Employee Kits",
-        "subCategoryList": [
-          "Welcome Kits",
-          "Work From Home Kits",
-          "Festival Gift Kits",
-          "Custom Swag Boxes",
-          "Onboarding Essentials",
-          "Corporate Event Kits",
-          "Brand Merchandise Kits"
-        ]
-      },
-      {
-        "subCategory": "Drinkware",
-        "subCategoryList": [
-          "Stainless Steel Bottles",
-          "Thermal Drinkware",
-          "Corporate Coffee Mugs",
-          "Travel Tumblers"
-        ],
-        "newSubCategoryList": ["Glassware Sets", "Personalized Sippers"]
-      },
-      {
-        "subCategory": "Snacks & Hampers",
-        "subCategoryList": [
-          "Premium Dry Fruit Boxes",
-          "Chocolate Gift Packs",
-          "Healthy Snack Hampers",
-          "Festive Gift Baskets",
-          "Custom Gift Hampers"
+          "Premium Leather Diaries",
+          "Logo-Engraved Pens",
+          "Custom Tech Gadgets",
+          "Desktop Trophies"
         ]
       }
     ]
   },
+
   {
     "id": 8,
-    "productCategory": "Same Day Delivery",
-    "link": "See all Same Day Delivery",
+    "productCategory": "Plants & Greenery",
+    "link": "See all Food & Beverages",
     "CategoryList": [
       {
-        "subCategory": "Quick Gifts",
+        "subCategory": "Plants Collection",
         "subCategoryList": [
-          "Fresh Flower Bouquets",
-          "Chocolate Gift Boxes",
-          "Instant Gift Cards",
-          "Personalized Photo Frames",
-          "Perfume for Men & Women"
+          "Money Plants",
+          "Snake Plants",
+          "Lucky Bamboo",
+          "Spider Plants"
         ],
-        "newSubCategoryList": [
-          "Soft Teddy Plushies",
-          "Sweet Hampers",
-          "Coffee Mugs with Name"
-        ]
+        "newSubCategoryList": ["Flowering Plants"]
       },
       {
-        "subCategory": "Celebration Essentials",
+        "subCategory": "Planters Style",
         "subCategoryList": [
-          "Birthday Cakes",
-          "Party Balloons",
-          "Birthday Banners",
-          "Candle Sets",
-          "Confetti & Party Props",
-          "Greeting Cards",
-          "Decorative Gift Bags"
-        ]
-      },
-      {
-        "subCategory": "Office Essentials",
-        "subCategoryList": [
-          "Executive Pens",
-          "Premium Notebooks",
-          "Desk Organizers",
-          "Ink Cartridges",
-          "Business Card Holders",
-          "USB Drives"
-        ],
-        "newSubCategoryList": ["Desktop Calendars"]
-      },
-      {
-        "subCategory": "Emergency Gifting",
-        "subCategoryList": ["Corporate Hampers"],
-        "newSubCategoryList": [
-          "Express Snack Boxes",
-          "Care Packs",
-          "Wellness Kits",
-          "Quick Fruit Baskets",
-          "Last-Minute Apparel Gifts"
-        ]
-      },
-      {
-        "subCategory": "Quick Delivery Decor",
-        "subCategoryList": [
-          "Mini Indoor Plants",
-          "Flower Vase Decor",
-          "LED String Lights",
-          "Aroma Candles",
-          "Tabletop Showpieces",
-          "Wall Frames"
+          "Ceramic Planters",
+          "Metal Planters",
+          "Glass Planters",
+          "Mugs Planters",
+          "Plants Combos"
         ]
       }
     ]
   },
   {
     "id": 9,
-    "productCategory": "Custom Polot T-shirts",
-    "link": "See all Custom Polot T-shirts",
+    "productCategory": "Jewelry & Keepsakes",
+    "link": "See all Jewelry",
     "CategoryList": [
       {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav/Polo's/Embroidered-Polo-T-Shirts",
-        "categoryName": "Men's Polo T-Shirts"
+        "subCategory": "Personalized Jewelry",
+        "subCategoryList": [
+          "Name Necklaces",
+          "Initial Pendants",
+          "Engraved Bracelets",
+          "Photo Lockets"
+        ]
       },
       {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav/Polo's/Premium-Polo-T-Shirts",
-        "categoryName": "Premium Polo T-Shirts",
-        "categoryDescription": "Same Day Delivery Mumbai, Pune"
-      },
-      {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav/Polo's/Scott-Polo-T-Shirts",
-        "categoryName": "Ment's Scott Polo T-Shirts",
-        "categoryDescription": "Same Day Delivery Mumbai"
-      },
-      {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav/Polo's/Puma-Polo-T-Shirts",
-        "categoryName": "Puma Polo T-shirts",
-        "categoryDescription": "Same Day Delivery Mumbai, Pune Y Bangalore"
-      },
-      {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav/Polo's/Polyester-Polo-T-Shirts",
-        "categoryName": "Polyester Polo T-Shirts",
-        "categoryDescription": "Same Day Delivery Mumbai"
-      },
-      {
-        "categoryImage": "https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,w_360/India%20LOB/Top%20Nav%20Tiles/Polo/Printed-Polos---Multi-Location",
-        "categoryName": "Paper Embosser",
-        "categoryDescription": "Printed Polos Multi-Location"
+        "subCategory": "Fashion Keepsakes",
+        "subCategoryList": [
+          "Minimalist Earrings",
+          "Silver Rings",
+          "Couple Promise Rings",
+          "Jewelry Boxes"
+        ]
       }
     ]
   },
   {
     "id": 10,
-    "productCategory": "Food & Beverages",
-    "link": "See all Food & Beverages",
+    "productCategory": "Extra Smiles",
+    "link": "See all unique items",
     "CategoryList": [
       {
-        "subCategory": "Snacks & Munchies",
+        "subCategory": "Home & Comfort",
         "subCategoryList": [
-          "Potato Chips",
-          "Nachos & Dips",
-          "Popcorn Packs",
-          "Salted & Roasted Nuts"
-        ],
-        "newSubCategoryList": [
-          "Protein Bars",
-          "Cookies & Crackers",
-          "Snack Combo Packs",
-          "Healthy Granola Bites"
+          "Personalized Mugs",
+          "Custom Cushions",
+          "Photo Frames",
+          "Wall Clocks",
+          "Aroma Candles"
         ]
       },
       {
-        "subCategory": "Cold & Hot Beverages",
+        "subCategory": "Daily Essentials",
         "subCategoryList": [
-          "Fruit Juices",
-          "Soft Drinks",
-          "Iced Tea & Cold Coffee",
-          "Health Drinks",
-          "Instant Coffee",
-          "Premium Tea Collection",
-          "Energy Drinks",
-          "Mocktail Drinks"
+          "Leather Wallets",
+          "Custom Keychains",
+          "Passport Covers",
+          "Personalized Pens",
+          "Travel Kits"
         ]
       },
       {
-        "subCategory": "Packaged Meals",
+        "subCategory": "Special Extras",
         "subCategoryList": [
-          "Instant Noodles",
-          "Ready-to-Eat Meals",
-          "Cereal Meal Packs",
-          "Soup Mixes",
-          "Frozen Meals",
-          "Microwave Snacks",
-          "Meal Replacement Bars"
-        ]
-      },
-      {
-        "subCategory": "Gourmet & Imported",
-        "subCategoryList": [
-          "Artisanal Chocolates",
-          "Imported Cheeses",
-          "Exotic Sauces",
-          "Premium Coffee Beans",
-          "Baked Breads",
-          "Organic Dry Fruits",
-          "Luxury Gift Hampers"
-        ]
-      },
-      {
-        "subCategory": "Healthy & Organic",
-        "subCategoryList": ["Gluten-Free Snacks", "Organic Honey"],
-        "newSubCategoryList": [
-          "Natural Peanut Butter",
-          "Dairy Alternatives",
-          "Cold-Pressed Oils",
-          "Low-Sugar Cookies",
-          "Plant-Based Snacks"
+          "Fragrance Gift Sets",
+          "Showpieces",
+          "LED Bottle Lamps",
+          "Experience Vouchers"
         ]
       }
     ]

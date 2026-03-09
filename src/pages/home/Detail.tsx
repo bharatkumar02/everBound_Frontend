@@ -22,7 +22,7 @@ export default function Detail() {
         </div>
         <div className='h-full overflow-hidden lg:rounded-b-xl'>
           <h2 className='px-3 pb-3.5 text-2xl leading-8 font-semibold tracking-wider md:p-5 lg:pb-5 lg:text-3xl lg:leading-12 xl:text-4xl lg:text-center'>
-            Explore the Art of Quality Printing
+            Explore the Art of Curated Celebrations
           </h2>
           <div  className='lg:rounded-xl lg:overflow-hidden h-full'>
             <img

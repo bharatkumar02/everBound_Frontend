@@ -7,7 +7,7 @@ export default function RootRoute() {
   return (
     <>
       <Header />
-      <div className="hidden lg:block sticky top-0 z-40">
+      <div className="hidden lg:block sticky top-0 z-20">
         <ProductList />
       </div>
       <main>

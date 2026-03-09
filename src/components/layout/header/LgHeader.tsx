@@ -67,7 +67,7 @@ export default function LgHeader() {
             <CircleUserRound size={22} strokeWidth={1.7} />
             My Account
           </button>
-          <div className="translate-all invisible absolute top-12 -left-3 z-50 w-full min-w-[12rem] translate-y-2 divide-y-[0.5px] rounded-md bg-white text-start text-[14.5px] opacity-0 shadow-md duration-300 peer-focus:visible peer-focus:translate-y-0 peer-focus:opacity-100">
+          <div className="translate-all invisible  absolute top-12 -left-3 z-50 w-full min-w-[12rem] translate-y-2 divide-y-[0.5px] rounded-md bg-white text-start text-[14.5px] opacity-0 shadow-md duration-300 peer-focus:visible peer-focus:translate-y-0 peer-focus:opacity-100">
             <ul className="divide-y-[0.5px]">
               {AccountListItems.map((item, index) => {
                 const IconComponent = iconMap[item.icon];

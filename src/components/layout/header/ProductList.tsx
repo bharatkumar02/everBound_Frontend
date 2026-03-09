@@ -108,7 +108,7 @@ export default function ProductList() {
                           ),
                         )}
 
-                        { subItem.newSubCategoryList &&
+                        {subItem.newSubCategoryList &&
                           subItem.newSubCategoryList.length > 0 &&
                           subItem.newSubCategoryList.map((item, index) => (
                             <li onMouseDown={(e) => e.preventDefault()}>
@@ -189,7 +189,7 @@ export default function ProductList() {
       </div>
 
       {/* For Large Screen from 1280px upward */}
-      <div className="hidden bg-[#7A3E9D] min-[1280px]:block ">
+      <div className="hidden bg-[#7A3E9D] min-[1280px]:block">
         {/* Main Categories */}
         <ul className="text-[15px] text-white shadow lg:flex lg:items-start lg:justify-center lg:text-[14px] *:lg:px-4">
           {headerData.map((item) => (
@@ -198,7 +198,7 @@ export default function ProductList() {
                 <span>{item.productCategory}</span>
               </button>
               {/* Subcategories */}
-              <div className="invisible absolute z-40 top-full left-0 min-h-[250px] w-full -translate-y-2 border-t bg-white pt-4 opacity-0 shadow-lg transition-all delay-300 duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="invisible absolute top-full left-0 z-40 min-h-[250px] w-full -translate-y-2 border-t bg-white pt-4 opacity-0 shadow-lg transition-all delay-300 duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                 <ul className="columns-6 px-10 py-5 text-gray-900">
                   {item.CategoryList.map((subItem, subIndex) => {
                     // Standard Lists with title
@@ -267,25 +267,6 @@ export default function ProductList() {
                         </li>
                       );
                     }
-
-                    // Promo image tile
-                    // if (subItem.subCategoryImg) {
-                    //   return (
-                    //     <li
-                    //       key={subIndex}
-                    //       className="mb-6 flex w-full cursor-pointer break-inside-avoid flex-col items-center lg:w-auto"
-                    //     >
-                    //       <img
-                    //         src={subItem.subCategoryImg}
-                    //         alt={subItem.subCategorytext}
-                    //         className="mb-2 w-60 rounded-md object-cover"
-                    //       />
-                    //       <p className="text-sm text-gray-600">
-                    //         {subItem.subCategorytext}
-                    //       </p>
-                    //     </li>
-                    //   );
-                    // }
 
                     return null;
                   })}
