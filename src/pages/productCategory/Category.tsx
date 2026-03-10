@@ -78,14 +78,14 @@ export default function Category() {
                 <SwiperSlide key={index} className="group lg:overflow-hidden">
                   <Link to="/product-detail">
                     <div className="overflow-hidden rounded bg-white">
-                      <img
+                      {/* <img
                         src={product.img}
                         alt={product.name}
                         className="object-cover transition-all duration-500 group-hover:scale-125"
-                      />
+                      /> */}
                     </div>
                     <div className="flex flex-col gap-2 p-3 text-[14px] lg:text-[15px] xl:text-base">
-                      <span className="F font-medium">{product.name}</span>
+                      {/* <span className="F font-medium">{product.name}</span> */}
                       <h4 className="flex items-center gap-2.5 bg-white text-base font-semibold tracking-wide text-gray-800 lg:text-lg">
                         <span className="text-[13px] text-gray-400 line-through lg:text-[14px]">
                           ₹299/-
@@ -157,14 +157,14 @@ export default function Category() {
                 <SwiperSlide key={index} className="group lg:overflow-hidden">
                   <Link to="/product-detail">
                     <div className="overflow-hidden rounded bg-white">
-                      <img
+                      {/* <img
                         src={product.img}
                         alt={product.name}
                         className="object-cover transition-all duration-500 group-hover:scale-125"
-                      />
+                      /> */}
                     </div>
                     <div className="flex flex-col gap-2 p-3 text-[14px] lg:text-[15px] xl:text-base">
-                      <span className="F font-medium">{product.name}</span>
+                      {/* <span className="F font-medium">{product.name}</span> */}
                       <h4 className="flex items-center gap-2.5 bg-white text-base font-semibold tracking-wide text-gray-800 lg:text-lg">
                         <span className="text-[13px] text-gray-400 line-through lg:text-[14px]">
                           ₹299/-
@@ -236,14 +236,14 @@ export default function Category() {
                 <SwiperSlide key={index} className="group lg:overflow-hidden">
                   <Link to="/product-detail">
                     <div className="overflow-hidden rounded bg-white">
-                      <img
+                      {/* <img
                         src={product.img}
                         alt={product.name}
                         className="object-cover transition-all duration-500 group-hover:scale-125"
-                      />
+                      /> */}
                     </div>
                     <div className="flex flex-col gap-2 p-3 text-[14px] lg:text-[15px] xl:text-base">
-                      <span className="F font-medium">{product.name}</span>
+                      {/* <span className="F font-medium">{product.name}</span> */}
                       <h4 className="flex items-center gap-2.5 bg-white text-base font-semibold tracking-wide text-gray-800 lg:text-lg">
                         <span className="text-[13px] text-gray-400 line-through lg:text-[14px]">
                           ₹299/-
@@ -315,14 +315,14 @@ export default function Category() {
                 <SwiperSlide key={index} className="group lg:overflow-hidden">
                   <Link to="/product-detail">
                     <div className="overflow-hidden rounded bg-white">
-                      <img
+                      {/* <img
                         src={product.img}
                         alt={product.name}
                         className="object-cover transition-all duration-500 group-hover:scale-125"
-                      />
+                      /> */}
                     </div>
                     <div className="flex flex-col gap-2 p-3 text-[14px] lg:text-[15px] xl:text-base">
-                      <span className="F font-medium">{product.name}</span>
+                      {/* <span className="F font-medium">{product.name}</span> */}
                       <h4 className="flex items-center gap-2.5 bg-white text-base font-semibold tracking-wide text-gray-800 lg:text-lg">
                         <span className="text-[13px] text-gray-400 line-through lg:text-[14px]">
                           ₹299/-
@@ -394,14 +394,14 @@ export default function Category() {
                 <SwiperSlide key={index} className="group lg:overflow-hidden">
                   <Link to="/product-detail">
                     <div className="overflow-hidden rounded bg-white">
-                      <img
+                      {/* <img
                         src={product.img}
                         alt={product.name}
                         className="object-cover transition-all duration-500 group-hover:scale-125"
-                      />
+                      /> */}
                     </div>
                     <div className="flex flex-col gap-2 p-3 text-[14px] lg:text-[15px] xl:text-base">
-                      <span className="F font-medium">{product.name}</span>
+                      {/* <span className="F font-medium">{product.name}</span> */}
                       <h4 className="flex items-center gap-2.5 bg-white text-base font-semibold tracking-wide text-gray-800 lg:text-lg">
                         <span className="text-[13px] text-gray-400 line-through lg:text-[14px]">
                           ₹299/-
