@@ -1,8 +1,29 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Navigation, Keyboard } from "swiper/modules";
+import { Link } from "react-router";
 
-const productList = [
+interface ProductListData {
+  img: string;
+  name: string;
+  title: string;
+}
+interface PaymentGateway {
+  img: string;
+  alt: string;
+}
+
+interface FooterLink {
+  listName: string;
+  link: string;
+}
+
+interface FooterData {
+  name: string;
+  list: FooterLink[];
+}
+
+const productList: ProductListData[] = [
   {
     img: "/public/images/img-63.jpg",
     name: "T-Shirts",
@@ -45,7 +66,7 @@ const productList = [
   },
 ];
 
-const paymentGateway = [
+const paymentGateway: PaymentGateway[] = [
   { img: "/visaCard.svg", alt: "Visa Card" },
   { img: "/googlePay.svg", alt: "Google Pay" },
   { img: "/mastercard.svg", alt: "Master Card" },
@@ -53,18 +74,76 @@ const paymentGateway = [
   { img: "/paytm.svg", alt: "Paytm" },
 ];
 
-const dropDownList = [
+const footerData: FooterData[] = [
   {
-    name: "Quick Links",
-    list: ["Home", "About Us", "Contact Us", "Products Gallery"],
+    name: "Support",
+    list: [
+      {
+        listName: "Help Center",
+        link: "contact-us",
+      },
+      {
+        listName: "FAQ's",
+        link: "faq",
+      },
+
+      {
+        listName: "My Account",
+        link: "/",
+      },
+      {
+        listName: "Track Order",
+        link: "/",
+      },
+    ],
   },
   {
-    name: "Service Desk",
-    list: ["FAQ's", "Return Policy", "Privacy Policy", "Terms & Conditions"],
+    name: "Our Company",
+    list: [
+      {
+        listName: "About Us",
+        link: "about-us",
+      },
+      {
+        listName: "Terms & Conditions",
+        link: "terms-conditions",
+      },
+      {
+        listName: "Privacy Policy",
+        link: "privacy-policy",
+      },
+
+      {
+        listName: "Return Policy",
+        link: "return-policy",
+      },
+    ],
   },
   {
-    name: "Best Sellers",
-    list: ["Photo Mugs", "Mobile Cases", "Photo Frames", "Wooden Stand"],
+    name: "Product",
+
+    list: [
+      {
+        listName: "Flower & Bouquets",
+        link: "/",
+      },
+      {
+        listName: "Cakes & Choclates",
+        link: "/",
+      },
+      {
+        listName: "Jewelry & Keepsakes",
+        link: "/",
+      },
+      {
+        listName: "Plants & Greenry",
+        link: "/",
+      },
+      {
+        listName: "Extra Smiles",
+        link: "/",
+      },
+    ],
   },
 ];
 
@@ -128,139 +207,25 @@ function Footer() {
               </div>
             </section>
 
-            {/* <!-- Products --> */}
-            <div>
-              <h3 className="mb-4 w-fit border-b-[0.5px] border-white/30 pb-2.5 text-lg font-semibold tracking-wide text-white lg:mb-8">
-                Products
-              </h3>
-              <ul className="space-y-2 lg:space-y-3.5">
-                <li>
-                  <a
-                    href="healthcare"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Stationary
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="contact"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Cloathing
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="travel"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Stamps & Ink
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="real-estate"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Corporate Gifts
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="real-estate"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    See all Products
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* <!-- Company Links --> */}
-            <div>
-              <h3 className="mb-4 w-fit border-b-[0.5px] border-white/30 pb-2.5 text-lg font-semibold tracking-wide text-white lg:mb-8">
-                Our Company
-              </h3>
-              <ul className="space-y-2 lg:space-y-3.5">
-                <li>
-                  <a
-                    href="about"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    About
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="retail"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="education"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Terms & Conditions
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="education"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Return Policy
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* <!-- Industries --> */}
-            <div>
-              <h3 className="mb-4 w-fit border-b-[0.5px] border-white/30 pb-2.5 text-lg font-semibold tracking-wide text-white lg:mb-8">
-                Support
-              </h3>
-              <ul className="space-y-2 lg:space-y-3.5">
-                <li>
-                  <a
-                    href="healthcare"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Help Center
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="contact"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    FAQ's
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="travel"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    My Account
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="real-estate"
-                    className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
-                  >
-                    Track Order
-                  </a>
-                </li>
-              </ul>
-            </div>
+            {footerData.map((item, index) => (
+              <div key={index}>
+                <h3 className="mb-4 w-fit border-b-[0.5px] border-white/30 pb-2.5 text-lg font-semibold tracking-wide text-white lg:mb-8">
+                  {item.name}
+                </h3>
+                <ul className="space-y-2 lg:space-y-3.5">
+                  {item.list.map((listItem, index) => (
+                    <li key={index}>
+                      <Link
+                        to={listItem.link}
+                        className="relative inline-block transition after:block after:h-0.5 after:w-0 after:bg-[#E5C185] after:transition-all hover:text-[#E5C185] hover:after:w-full"
+                      >
+                        {listItem.listName}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
 
             {/* Contact Support */}
             <div>

@@ -13,6 +13,7 @@ import {
   CircleUserRound,
   LogOut,
 } from "lucide-react";
+import { Link } from "react-router";
 
 type IconName = keyof typeof iconMap;
 interface AccountItem {
@@ -37,9 +38,9 @@ export default function LgHeader() {
   return (
     <div className="flex items-center justify-between bg-white px-3.5 py-5 xl:px-14">
       <div className="flex w-2/3 items-center justify-start gap-10 xl:gap-16">
-        <a href="#">
+        <Link to="/">
           <img src="/logo/logo2.png" alt="logo" className="max-w-[13rem]" />
-        </a>
+        </Link>
         <div className="flex w-[50%] justify-between overflow-hidden rounded-full border-[0.5px] border-gray-200 bg-gray-50 text-[15px] *:py-2.5">
           <label
             htmlFor="search"
