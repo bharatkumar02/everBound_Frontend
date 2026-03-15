@@ -1,5 +1,5 @@
 import { KeyRound } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 export default function NewPassword() {
   return (
     <>
@@ -8,7 +8,7 @@ export default function NewPassword() {
           <div className="flex min-h-screen w-full flex-col items-center gap-10 pt-10 md:mt-0 md:min-h-full md:w-1/2 md:justify-center md:pt-0">
             <div className="max-w-[10rem] md:hidden">
               <img
-                src="https://cdn.printshoppy.com/image/catalog/v6/svg/printshoppy-logo.svg"
+                src="/logo/logo2.png"
                 alt="Logo"
               />
             </div>
@@ -82,7 +82,7 @@ export default function NewPassword() {
 
           <div className="hidden w-[50%] bg-white md:block md:border-l-[0.5px] md:border-gray-200/70">
             <img
-              src="https://cdn.printshoppy.com/image/catalog/v6/svg/printshoppy-logo.svg"
+              src="/logo/logo2.png"
               alt="Registration"
               className="mx-auto mt-10 max-w-[10rem]"
             />

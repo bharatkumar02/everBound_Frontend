@@ -22,11 +22,5 @@
     "to": "/customer/addresses",
     "icon": "MapPinned",
     "description": "Add an address for smooth delivery."
-  },
-  {
-    "label": "Referrals",
-    "to": "/customer/referrals",
-    "icon": "HandCoins",
-    "description": "Invite and earn with each referral."
   }
 ]

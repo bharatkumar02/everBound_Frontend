@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CircleUserRound } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Phone } from "lucide-react";
 import { Mail } from "lucide-react";
 import { KeyRound } from "lucide-react";
@@ -12,44 +12,15 @@ export default function Registration() {
     agree: false,
   });
 
-  const handelChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
+  // const handelChange = (e) => {
+  //   const { name, value, type, checked } = e.target;
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [name]: type === "checkbox" ? checked : value,
+  //   }));
+  // };
 
-  const handeSubmit = async (e) => {
-    e.preventDefault();
-    if (!formData.agree) {
-      alert("Please accept Terms & Conditions!!");
-      return;
-    }
 
-    try {
-      const response = await fetch(
-        "http://127.0.0.1:8000/v1/customer/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        },
-      );
-
-      if (!response.ok) {
-        throw new Error("Data not send Successfully!!");
-      }
-      const data = await response.json();
-      alert("Registration Successful!!");
-      console.log("Response", data);
-    } catch (error) {
-      console.log("Error uyguiohihiuh", error);
-      alert("Registration Failed.");
-    }
-  };
   return (
     <>
       <div className='bg-purple-50/80 md:grid md:h-screen md:w-screen md:place-items-center md:bg-[url("/circle.svg")] md:bg-cover md:bg-center md:bg-no-repeat md:px-5'>
@@ -57,12 +28,11 @@ export default function Registration() {
           <div className="flex min-h-screen w-full flex-col items-center gap-10 pt-10 md:mt-0 md:min-h-full md:w-1/2 md:justify-center md:pt-0">
             <div className="max-w-[10rem] md:hidden">
               <img
-                src="https://cdn.printshoppy.com/image/catalog/v6/svg/printshoppy-logo.svg"
+                src="/logo/logo2.png"
                 alt="Logo"
               />
             </div>
             <form
-              onSubmit={handeSubmit}
               className="relative z-50 w-full max-w-[20.5rem] before:absolute before:-left-2.5 before:-top-2.5 before:-z-10 before:h-full before:w-full before:rounded-md before:border-2 before:border-purple-200 md:max-w-full md:before:hidden"
             >
               <div className="absolute -bottom-2.5 -right-2.5 -z-10 h-full w-full rounded-md border-2 border-purple-200 md:hidden"></div>
@@ -80,7 +50,7 @@ export default function Registration() {
                     <input
                       name="name"
                       value={formData.name}
-                      onChange={handelChange}
+                     
                       type="text"
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
@@ -93,7 +63,7 @@ export default function Registration() {
                       type="tel"
                       name="phone"
                       value={formData.phone}
-                      onChange={handelChange}
+                     
                       pattern="\d{10}"
                       minLength={10}
                       maxLength={10}
@@ -108,7 +78,7 @@ export default function Registration() {
                       type="email"
                       name="email"
                       value={formData.email}
-                      onChange={handelChange}
+                     
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
                       placeholder="Enter Your Email"
@@ -120,7 +90,7 @@ export default function Registration() {
                       type="password"
                       name="Password"
                       value={formData.email}
-                      onChange={handelChange}
+                     
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
                       placeholder="New Password"
@@ -132,7 +102,7 @@ export default function Registration() {
                       type="Password"
                       name="Password"
                       value={formData.email}
-                      onChange={handelChange}
+                     
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
                       placeholder="Conform Password"
@@ -144,7 +114,7 @@ export default function Registration() {
                     type="checkbox"
                     name="agree"
                     checked={formData.agree}
-                    onChange={handelChange}
+                   
                   />
                   <p className="flex gap-1 text-[15px]">
                     I accept all
@@ -187,7 +157,7 @@ export default function Registration() {
 
           <div className="hidden w-[50%] bg-white md:block md:border-l-[0.5px] md:border-gray-200/70">
             <img
-              src="https://cdn.printshoppy.com/image/catalog/v6/svg/printshoppy-logo.svg"
+              src="/logo/logo2.png"
               alt="Registration"
               className="mx-auto mt-10 max-w-[10rem]"
             />

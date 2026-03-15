@@ -1,5 +1,5 @@
 import { KeyRound } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 export default function ResetPassword() {
   return (
     <div className='bg-purple-50/80 md:grid md:h-screen md:w-screen md:place-items-center md:bg-[url("/circle.svg")] md:bg-cover md:bg-center md:bg-no-repeat md:px-5'>
@@ -7,15 +7,15 @@ export default function ResetPassword() {
         <div className="flex min-h-screen w-full flex-col items-center gap-10 pt-10 md:mt-0 md:min-h-full md:w-1/2 md:justify-center md:pt-0">
           <div className="max-w-[10rem] md:hidden">
             <img
-              src="https://cdn.printshoppy.com/image/catalog/v6/svg/printshoppy-logo.svg"
+              src="/logo/logo2.png"
               alt="Logo"
             />
           </div>
           <form
             // onSubmit={handeSubmit}
-            className="relative z-50 w-full max-w-[20.5rem] before:absolute before:-left-2.5 before:-top-2.5 before:-z-10 before:h-full before:w-full before:rounded-md before:border-2 before:border-purple-200 md:max-w-full md:before:hidden"
+            className="relative z-50 w-full max-w-[20.5rem] before:absolute before:-top-2.5 before:-left-2.5 before:-z-10 before:h-full before:w-full before:rounded-md before:border-2 before:border-purple-200 md:max-w-full md:before:hidden"
           >
-            <div className="absolute -bottom-2.5 -right-2.5 -z-10 h-full w-full rounded-md border-2 border-purple-200 md:hidden"></div>
+            <div className="absolute -right-2.5 -bottom-2.5 -z-10 h-full w-full rounded-md border-2 border-purple-200 md:hidden"></div>
 
             <div className="rounded-md bg-white p-3 py-5 shadow-[0px_0px_5px_0px_#D1D5DB] md:space-y-3 md:rounded-none md:px-10 md:shadow-none">
               <h2 className="text-center text-xl font-medium md:text-2xl">
@@ -25,7 +25,7 @@ export default function ResetPassword() {
                 No big deal – let’s get you a new password.
               </p>
               <div className="space-y-6 pt-5 text-[15px] md:space-y-9">
-                <ul className="space-y-3 bg-purple-100 p-3 rounded-lg list-disc pl-6">
+                <ul className="list-disc space-y-3 rounded-lg bg-purple-100 p-3 pl-6">
                   <li>Enter your email and we’ll send reset instructions.</li>
                   <li>We don’t store passwords, so we’ll never email yours.</li>
                 </ul>
@@ -56,7 +56,7 @@ export default function ResetPassword() {
               <div className="my-10 flex flex-col items-center gap-3 text-[15px]">
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-purple-700 py-2 font-medium uppercase tracking-wider text-white md:mt-10 md:w-[80%]"
+                  className="w-full rounded-full bg-purple-700 py-2 font-medium tracking-wider text-white uppercase md:mt-10 md:w-[80%]"
                 >
                   <Link to="/new-password">Send Reset Instruction</Link>
                 </button>
@@ -74,7 +74,7 @@ export default function ResetPassword() {
 
         <div className="hidden w-[50%] bg-white md:block md:border-l-[0.5px] md:border-gray-200/70">
           <img
-            src="https://cdn.printshoppy.com/image/catalog/v6/svg/printshoppy-logo.svg"
+            src="/logo/logo2.png"
             alt="Registration"
             className="mx-auto mt-10 max-w-[10rem]"
           />

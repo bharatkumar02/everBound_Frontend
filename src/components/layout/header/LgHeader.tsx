@@ -59,10 +59,10 @@ export default function LgHeader() {
         </div>
       </div>
       <div className="flex w-1/3 items-center justify-end gap-10 text-[14px]">
-        <a href="#" className="flex items-center gap-2.5">
+        <Link to="cart" className="flex items-center gap-2.5">
           <ShoppingCart size={22} strokeWidth={1.7} />
           My Cart
-        </a>
+        </Link>
         <div className="relative">
           <button className="peer flex cursor-pointer items-center gap-2.5">
             <CircleUserRound size={22} strokeWidth={1.7} />
@@ -94,12 +94,12 @@ export default function LgHeader() {
               })}
             </ul>
             <div className="bg-red-50">
-              <a
-                href="#"
+              <Link
+                to="login"
                 className="flex cursor-pointer items-center gap-3.5 px-4 py-2.5 text-red-600"
               >
                 <LogOut strokeWidth={1.5} size={20} /> Logout
-              </a>
+              </Link>
             </div>
           </div>
         </div>

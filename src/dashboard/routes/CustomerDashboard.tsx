@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router';
 
 import AccountSettings from '../pages/account-settings';
 import Order from '../pages/orders/list';
