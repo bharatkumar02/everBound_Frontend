@@ -13,8 +13,8 @@ import {
   CircleUserRound,
   LogOut,
 } from "lucide-react";
-import { Link } from "react-router";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router";
+import { useEffect, useState } from "react";
 
 type IconName = keyof typeof iconMap;
 interface AccountItem {
@@ -36,7 +36,25 @@ const iconMap = {
 };
 
 export default function LgHeader() {
-  const [login, setLogin] = useState(false);
+  const [user, setUser] = useState<{ name: string; email: string } | null>(
+    null,
+  );
+  const navigate = useNavigate();
+
+  // Check if user Data is exist in localstorage
+  useEffect(() => {
+    const savedUser = localStorage.getItem("user");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
+
+  function handelLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/login");
+  }
   return (
     <div className="flex items-center justify-between bg-white px-3.5 py-5 xl:px-14">
       <div className="flex w-2/3 items-center justify-start gap-10 xl:gap-16">
@@ -65,13 +83,15 @@ export default function LgHeader() {
           <ShoppingCart size={22} strokeWidth={1.7} />
           My Cart
         </Link>
-        {login ? (
+        {user ? (
           <div className="relative">
             <button className="peer flex cursor-pointer items-center gap-2.5">
               <CircleUserRound size={22} strokeWidth={1.7} />
               My Account
             </button>
             <div className="translate-all invisible absolute top-12 -left-3 z-50 w-full min-w-[12rem] translate-y-2 divide-y-[0.5px] rounded-md bg-white text-start text-[14.5px] opacity-0 shadow-md duration-300 peer-focus:visible peer-focus:translate-y-0 peer-focus:opacity-100">
+              <div>{user.name}</div>
+              <div>{user.email}</div>
               <ul className="divide-y-[0.5px]">
                 {AccountListItems.map((item, index) => {
                   const IconComponent = iconMap[item.icon];
@@ -97,12 +117,12 @@ export default function LgHeader() {
                 })}
               </ul>
               <div className="bg-red-50">
-                <Link
-                  to="login"
+                <button
+                  onClick={handelLogout}
                   className="flex cursor-pointer items-center gap-3.5 px-4 py-2.5 text-red-600"
                 >
                   <LogOut strokeWidth={1.5} size={20} /> Logout
-                </Link>
+                </button>
               </div>
             </div>
           </div>

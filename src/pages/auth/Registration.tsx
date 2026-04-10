@@ -1,17 +1,63 @@
 import { useState } from "react";
 import { CircleUserRound } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { Phone } from "lucide-react";
 import { Mail } from "lucide-react";
 import { KeyRound } from "lucide-react";
+import axios from "axios";
+
 export default function Registration() {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
+    mobile: "",
     email: "",
+    password: "",
+    confirmPassword: "",
     agree: false,
   });
+  const [loading, setLoading] = useState(false);
 
+  const navigate = useNavigate();
+
+  const handelChange = (e: any) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  // handelSubmit login
+  const handelSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // Basic validation
+    if (formData.password !== formData.confirmPassword) {
+      return alert("Password do no match!");
+    }
+
+    if (!formData.agree) {
+      return alert("Please agree to the terms.");
+    }
+
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/user/register`,
+        formData,
+      );
+
+      if (response.data.success) {
+        alert("Registration Successful!!");
+        navigate("/login");
+      }
+    } catch (error: any) {
+      console.error("Signup Error", error.response?.data?.message);
+      alert(error.response?.data?.message || "Something Went Wrong!");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <>
       <div className='bg-purple-50/80 md:grid md:h-screen md:w-screen md:place-items-center md:bg-[url("/circle.svg")] md:bg-cover md:bg-center md:bg-no-repeat md:px-5'>
@@ -20,7 +66,10 @@ export default function Registration() {
             <div className="max-w-[10rem] md:hidden">
               <img src="/logo/logo2.png" alt="Logo" />
             </div>
-            <form className="relative z-50 w-full max-w-[20.5rem] before:absolute before:-top-2.5 before:-left-2.5 before:-z-10 before:h-full before:w-full before:rounded-md before:border-2 before:border-purple-200 md:max-w-full md:before:hidden">
+            <form
+              onSubmit={handelSubmit}
+              className="relative z-50 w-full max-w-[20.5rem] before:absolute before:-top-2.5 before:-left-2.5 before:-z-10 before:h-full before:w-full before:rounded-md before:border-2 before:border-purple-200 md:max-w-full md:before:hidden"
+            >
               <div className="absolute -right-2.5 -bottom-2.5 -z-10 h-full w-full rounded-md border-2 border-purple-200 md:hidden"></div>
 
               <div className="rounded-md bg-white p-3 py-5 shadow-[0px_0px_5px_0px_#D1D5DB] md:rounded-none md:px-10 md:shadow-none">
@@ -36,6 +85,7 @@ export default function Registration() {
                     <input
                       name="name"
                       value={formData.name}
+                      onChange={handelChange}
                       type="text"
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
@@ -46,8 +96,9 @@ export default function Registration() {
                     <Phone strokeWidth={1.2} size={22} color="gray" />
                     <input
                       type="tel"
-                      name="phone"
-                      value={formData.phone}
+                      name="mobile"
+                      onChange={handelChange}
+                      value={formData.mobile}
                       pattern="\d{10}"
                       minLength={10}
                       maxLength={10}
@@ -62,6 +113,7 @@ export default function Registration() {
                       type="email"
                       name="email"
                       value={formData.email}
+                      onChange={handelChange}
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
                       placeholder="Enter Your Email"
@@ -71,8 +123,9 @@ export default function Registration() {
                     <KeyRound strokeWidth={1.2} size={22} color="gray" />
                     <input
                       type="password"
-                      name="Password"
-                      value={formData.email}
+                      name="password"
+                      value={formData.password}
+                      onChange={handelChange}
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
                       placeholder="New Password"
@@ -81,12 +134,13 @@ export default function Registration() {
                   <label className="flex items-center gap-3 border-b-[0.5px] py-1 text-[15px]">
                     <KeyRound strokeWidth={1.2} size={22} color="gray" />
                     <input
-                      type="Password"
-                      name="Password"
-                      value={formData.email}
+                      type="password"
+                      name="confirmPassword"
+                      value={formData.confirmPassword}
+                      onChange={handelChange}
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
-                      placeholder="Conform Password"
+                      placeholder="Confirm Password"
                     />
                   </label>
                 </div>
@@ -95,6 +149,7 @@ export default function Registration() {
                     type="checkbox"
                     name="agree"
                     checked={formData.agree}
+                    onChange={handelChange}
                   />
                   <p className="flex gap-1 text-[15px]">
                     I accept all
@@ -106,15 +161,16 @@ export default function Registration() {
                 <div className="flex flex-col items-center gap-3 text-[15px]">
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-purple-700 py-2 font-medium tracking-wider text-white uppercase md:w-[80%]"
+                    className="w-full cursor-pointer rounded-full bg-purple-700 py-2 font-medium tracking-wider text-white uppercase md:w-[80%]"
                   >
-                    <Link to="/login">Register</Link>
+                    {loading ? "Registering..." : "Register"}
                   </button>
                   <div className="relative z-10 my-2 w-full text-center text-gray-500 before:absolute before:top-1/2 before:left-0 before:-z-10 before:h-[1px] before:w-full before:translate-y-1/2 before:rounded-full before:bg-gray-400 md:my-3">
                     <span className="bg-white px-1.5">Or Continue with</span>
                   </div>
                   <button
                     type="button"
+                    disabled={loading}
                     className="flex w-full items-center justify-center gap-1.5 rounded-full border-[0.9px] border-gray-400 py-2 font-medium tracking-wider uppercase md:w-[80%]"
                   >
                     <img

@@ -1,25 +1,66 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { KeyRound } from "lucide-react";
 import { Mail } from "lucide-react";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Login() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handelChange = (e: any) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handelSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/user/login`,
+        formData,
+      );
+
+      if (response.data.success) {
+        localStorage.setItem("token", response.data.token);
+
+        localStorage.setItem("user", JSON.stringify(response.data.user));
+
+        alert("Welcome Back");
+        navigate("/");
+      }
+    } catch (error: any) {
+      console.error(error.response?.data?.message);
+      alert(error.response?.data?.message || "Login Failed!");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <div className='bg-purple-50/80 md:grid md:h-screen md:w-screen md:place-items-center md:bg-[url("/circle.svg")] md:bg-cover md:bg-center md:bg-no-repeat md:px-5'>
         <div className="max-w-[60rem] bg-white md:flex md:w-full md:items-center md:justify-center md:border md:shadow-[0px_0px_5px_0px_#D1D5DB]">
           <div className="flex min-h-screen w-full flex-col items-center gap-10 pt-10 md:mt-0 md:min-h-full md:w-1/2 md:justify-center md:pt-0">
             <div className="max-w-[10rem] md:hidden">
-              <img
-                src="/logo/logo2.png"
-                alt="Logo"
-              />
+              <img src="/logo/logo2.png" alt="Logo" />
             </div>
             <form
-              // onSubmit={handeSubmit}
+              onSubmit={handelSubmit}
               autoComplete="off"
-              className="relative z-50 w-full max-w-[20.5rem] before:absolute before:-left-2.5 before:-top-2.5 before:-z-10 before:h-full before:w-full before:rounded-md before:border-2 before:border-purple-200 md:max-w-full md:before:hidden"
+              className="relative z-50 w-full max-w-[20.5rem] before:absolute before:-top-2.5 before:-left-2.5 before:-z-10 before:h-full before:w-full before:rounded-md before:border-2 before:border-purple-200 md:max-w-full md:before:hidden"
             >
-              <div className="absolute -bottom-2.5 -right-2.5 -z-10 h-full w-full rounded-md border-2 border-purple-200 md:hidden"></div>
+              <div className="absolute -right-2.5 -bottom-2.5 -z-10 h-full w-full rounded-md border-2 border-purple-200 md:hidden"></div>
 
               <div className="rounded-md bg-white p-3 py-5 shadow-[0px_0px_5px_0px_#D1D5DB] md:rounded-none md:px-10 md:shadow-none">
                 <h2 className="text-center text-xl font-medium md:text-2xl">
@@ -34,7 +75,7 @@ export default function Login() {
                     <input
                       type="email"
                       name="email"
-                      autoComplete="off"
+                      onChange={handelChange}
                       required
                       className="w-full outline-none placeholder:text-gray-400/80"
                       placeholder="Enter Your Email"
@@ -43,8 +84,9 @@ export default function Login() {
                   <label className="flex items-center gap-3 border-b-[0.5px] py-1 text-[15px]">
                     <KeyRound strokeWidth={1.2} size={22} color="gray" />
                     <input
-                      type="Password"
+                      type="password"
                       name="password"
+                      onChange={handelChange}
                       minLength={8}
                       required
                       autoComplete="off"
@@ -61,16 +103,17 @@ export default function Login() {
                 <div className="mt-4 flex flex-col items-center gap-3 text-[15px]">
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-purple-700 py-2 font-medium uppercase tracking-wider text-white md:w-[80%]"
+                    disabled={loading}
+                    className="w-full cursor-pointer rounded-full bg-purple-700 py-2 font-medium tracking-wider text-white uppercase md:w-[80%]"
                   >
-                    <Link to="/">LogIn</Link>
+                    {loading ? "Login..." : "Login"}
                   </button>
-                  <div className="relative z-10 my-2 w-full text-center text-gray-500 before:absolute before:left-0 before:top-1/2 before:-z-10 before:h-[1px] before:w-full before:translate-y-1/2 before:rounded-full before:bg-gray-400 md:my-3">
+                  <div className="relative z-10 my-2 w-full text-center text-gray-500 before:absolute before:top-1/2 before:left-0 before:-z-10 before:h-[1px] before:w-full before:translate-y-1/2 before:rounded-full before:bg-gray-400 md:my-3">
                     <span className="bg-white px-1.5">Or Continue with</span>
                   </div>
                   <button
                     type="button"
-                    className="flex w-full items-center justify-center gap-1.5 rounded-full border-[0.9px] border-gray-400 py-2 font-medium uppercase tracking-wider md:w-[80%]"
+                    className="flex w-full items-center justify-center gap-1.5 rounded-full border-[0.9px] border-gray-400 py-2 font-medium tracking-wider uppercase md:w-[80%]"
                   >
                     <img
                       src="/google.svg"
@@ -80,7 +123,7 @@ export default function Login() {
                     Google
                   </button>
                 </div>
-                <p className="pb-1.5 pt-6 text-center text-[15px]">
+                <p className="pt-6 pb-1.5 text-center text-[15px]">
                   Don't have an account?
                   <span className="pl-1.5 tracking-wider text-blue-900">
                     <Link to="/register">Register</Link>
