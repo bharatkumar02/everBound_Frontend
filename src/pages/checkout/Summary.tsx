@@ -1,18 +1,18 @@
 import {
   Trash2,
   Heart,
-  ArrowLeft,
   Plus,
   Minus,
   NotepadText,
-  MapPinned,
-  Truck,
-  ShieldCheck,
   CircleCheckBig,
-  BadgeIndianRupee,
-  Banknote,
 } from "lucide-react";
-export default function Summary({ currentStep, onContinue }) {
+
+interface SummaryProps {
+  currentStep: number;
+  onContinue: () => void;
+}
+
+export default function Summary({ currentStep, onContinue }: SummaryProps) {
   return (
     <>
       <div className="w-full max-w-full">
@@ -31,9 +31,8 @@ export default function Summary({ currentStep, onContinue }) {
               )}
             </h2>
             {/* After Completing Order Summary */}
-
             {[3, 4].includes(currentStep) && (
-              <p className="flex flex-col space-y-1 text-[14px] text-gray-500">
+              <p className="text-[14px] text-gray-500">
                 Your order for 5 items.
               </p>
             )}
@@ -47,14 +46,14 @@ export default function Summary({ currentStep, onContinue }) {
         </div>
         {/* Before Completing Order Summary */}
         {currentStep === 2 && (
-          <div className="">
+          <div>
             <ul className="space-y-2 rounded-lg bg-gray-100 text-[15px] *:rounded-lg *:bg-white *:shadow">
               <li className="flex items-start gap-3 px-1.5 py-3">
                 {/* Image Section */}
                 <div className="max-w-[5rem] lg:mx-3">
                   <img
                     src="/images/f-2.jpg"
-                    alt="Image"
+                    alt="Product image"
                     className="size-full"
                   />
                 </div>
@@ -100,7 +99,7 @@ export default function Summary({ currentStep, onContinue }) {
                 <div className="max-w-[5rem] lg:mx-3">
                   <img
                     src="/images/f-5.jpg"
-                    alt="Image"
+                    alt="Product image"
                     className="size-full"
                   />
                 </div>
@@ -146,7 +145,7 @@ export default function Summary({ currentStep, onContinue }) {
                 <div className="max-w-[5rem] lg:mx-3">
                   <img
                     src="/images/f-6.jpg"
-                    alt="Image"
+                    alt="Product image"
                     className="size-full"
                   />
                 </div>

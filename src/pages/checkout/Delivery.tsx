@@ -1,6 +1,11 @@
 import { Trash2, Plus, MapPinned, CircleCheckBig } from 'lucide-react';
 
-export default function Delivery({ currentStep, onContinue }) {
+interface DeliveryProps {
+  currentStep: number;
+  onContinue: () => void;
+}
+
+export default function Delivery({ currentStep, onContinue }: DeliveryProps) {
   return (
     <>
       <div className='w-full max-w-full'>
@@ -20,14 +25,14 @@ export default function Delivery({ currentStep, onContinue }) {
             </h2>
             {/* After Completing Address */}
             {[2, 3].includes(currentStep) && (
-              <p className='flex flex-col space-y-1 text-[14px] text-gray-500'>
+              <div className='flex flex-col space-y-1 text-[14px] text-gray-500'>
                 <span className='font-medium'>Bharat Kumar</span>
                 <div>
                   Khaliyavas Mohalla, Dharuhera, Rewari, Near Badi Haveli
                   <span className='ml-2 border-l pl-2'>123106</span>
                 </div>
                 <span> +91 8397826133</span>
-              </p>
+              </div>
             )}
           </div>
           {/* After Completing Address */}

@@ -10,14 +10,13 @@ export default function OrderDetail() {
             Delivery
           </h3>
           <div className="flex items-center gap-2.5">
-            {/* <Truck strokeWidth={1.5} /> */}
             <p>
               Estimate Delivered by
               <span className="pl-1 font-medium">June 24, 2022</span>.
             </p>
           </div>
         </div>
-        {/* Subototal */}
+        {/* Subtotal */}
         <div className="space-y-2 rounded-md bg-white px-6 py-3 shadow lg:py-4">
           <div className="flex items-center justify-between border-b border-dashed py-4 text-[15px] font-medium uppercase text-gray-500">
             <span className="flex items-center gap-1.5">
@@ -47,21 +46,19 @@ export default function OrderDetail() {
           <span>$78.76</span>
         </div>
 
-        <div className="items- flex gap-1 pt-3 text-[14px] font-medium text-gray-500">
+        <div className="flex items-center gap-1 pt-3 text-[14px] font-medium text-gray-500">
           <ShieldCheck className="text-green-600/70 drop-shadow-md" /> Shop
           Safe. Return Easy. 100% Genuine Items.
         </div>
         <div>
           <p className="text-center text-gray-500">
-            By continuing with the order, you confirm that you are above 18
+            By continuing with the order, you confirm that you are above 18{" "}
             <a href="#" className="w-fit text-blue-600">
-              {" "}
-              Terms of Use{" "}
+              Terms of Use
             </a>{" "}
             and{" "}
             <a href="#" className="w-fit text-blue-600">
-              {" "}
-              Pricacy Policy.{" "}
+              Privacy Policy.
             </a>
           </p>
         </div>

@@ -16,6 +16,8 @@ import Otp from "./pages/auth/Otp";
 import NewPassword from "./pages/auth/NewPassword";
 import Registration from "./pages/auth/Registration";
 import ResetPassword from "./pages/auth/ResetPassword";
+import AccountDetail from "./dashboard/pages/account-settings";
+import CustomerDashboard from "./dashboard/routes/CustomerDashboard";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +36,13 @@ const router = createBrowserRouter([
     ],
   },
 
+  // Dashboard
+  {
+    path: "/customer/*",
+    Component: CustomerDashboard,
+  },
+
+  // Authentication
   { path: "login", Component: Login },
   { path: "otp", Component: Otp },
   { path: "newPassword", Component: NewPassword },

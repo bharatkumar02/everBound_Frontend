@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Eye, EyeOff } from 'lucide-react';
-import { Outlet } from 'react-router';
+import { useState } from "react";
+import { Link } from "react-router";
+import { Mail, Eye, EyeOff } from "lucide-react";
+import { Outlet } from "react-router";
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>
       {/* Mobile layout */}
-      <section className="lg:hidden min-h-screen flex flex-col items-center justify-center gap-4 bg-gray-50">
-        <div className="max-w-[12rem] drop-shadow mx-auto">
+      <section className="flex min-h-screen flex-col items-center justify-center gap-4 bg-gray-50 lg:hidden">
+        <div className="mx-auto max-w-[12rem] drop-shadow">
           <Link to="/">
             <img src="/assets/images/logo1.png" alt="Logo" />
           </Link>
@@ -26,45 +26,41 @@ export default function Login() {
             <div className="space-y-7 pt-4">
               <label className="flex flex-col gap-1.5">
                 <span className="font-medium uppercase">
-                  Email <span className="text-red-600 text-lg">*</span>
+                  Email <span className="text-lg text-red-600">*</span>
                 </span>
-                <div className="flex flex-row-reverse justify-between items-center gap-3.5 border border-gray-300  border-solid px-3.5 py-0.5 rounded-2xl overflow-hidden transition-all focus-within:border-gray-500/80 bg-white">
-                  <Mail
-                    strokeWidth={1.5}
-                    size={25}
-                    className="text-gray-400"
-                  />
+                <div className="flex flex-row-reverse items-center justify-between gap-3.5 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white px-3.5 py-0.5 transition-all focus-within:border-gray-500/80">
+                  <Mail strokeWidth={1.5} size={25} className="text-gray-400" />
                   <input
                     type="email"
                     name="email"
                     autoComplete="email"
                     required
-                    className="w-full outline-none ring-0  placeholder:text-gray-400/80 border-none focus:border-none focus:shadow-none box-border m-0 p-0"
+                    className="m-0 box-border w-full border-none p-0 ring-0 outline-none placeholder:text-gray-400/80 focus:border-none focus:shadow-none"
                     placeholder="Enter Email"
                   />
                 </div>
               </label>
               <label className="flex flex-col gap-1.5">
                 <span className="font-medium uppercase">
-                  Password <span className="text-red-600 text-lg">*</span>
+                  Password <span className="text-lg text-red-600">*</span>
                 </span>
-                <div className="relative flex justify-between items-center gap-3.5 border border-gray-300  border-solid px-3.5 py-0.5 rounded-2xl transition-all focus-within:border-gray-500/80 bg-white">
+                <div className="relative flex items-center justify-between gap-3.5 rounded-2xl border border-solid border-gray-300 bg-white px-3.5 py-0.5 transition-all focus-within:border-gray-500/80">
                   <input
-                    type={showPassword ? 'text' : 'password'}
+                    type={showPassword ? "text" : "password"}
                     name="password"
                     autoComplete="current-password"
                     minLength={8}
                     required
-                    className="w-full outline-none ring-0  placeholder:text-gray-400/50 border-none focus:border-none focus:shadow-none box-border m-0 p-0 placeholder:align-middle"
+                    className="m-0 box-border w-full border-none p-0 ring-0 outline-none placeholder:align-middle placeholder:text-gray-400/50 focus:border-none focus:shadow-none"
                     placeholder="••••••"
                   />
                   <button
                     type="button"
                     aria-label={
-                      showPassword ? 'Hide password' : 'Show password'
+                      showPassword ? "Hide password" : "Show password"
                     }
                     onClick={() => setShowPassword((v) => !v)}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                    className="absolute top-1/2 right-2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                   >
                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                   </button>
@@ -72,15 +68,12 @@ export default function Login() {
               </label>
             </div>
             <div className="mt-8 flex items-center justify-between">
-              <Link
-                to="/forgot-password"
-                className="text-[15px] text-blue-800"
-              >
+              <Link to="/forgot-password" className="text-[15px] text-blue-800">
                 Forgot your password?
               </Link>
               <Link
                 to="/layout"
-                className="rounded-2xl bg-[#26A7DF] py-2.5 px-4 font-medium text-white"
+                className="rounded-2xl bg-[#26A7DF] px-4 py-2.5 font-medium text-white"
               >
                 Log In
               </Link>
@@ -91,25 +84,24 @@ export default function Login() {
 
       {/* Desktop layout */}
       <div className="hidden lg:block">
-        <div className="flex flex-col justify-center items-center min-h-screen">
-          <div className="drop-shadow max-w-[11rem]">
+        <div className="flex min-h-screen flex-col items-center justify-center">
+          <div className="max-w-[11rem] drop-shadow">
             <Link to="/">
               <img src="/assets/images/logo1.png" alt="Logo" />
             </Link>
           </div>
 
-          <section className="max-w-[60rem] mx-auto w-full mt-12 space-y-4 px-5">
-            <div className="bg-white relative before:absolute z-10 before:-z-10 before:[clip-path:polygon(50%_0%,100%_0%,100%_100%,0%_100%,25%_50%)] before:bg-[#8AC440] shadow-xl shadow-gray-200/70 overflow-hidden flex flex-row-reverse items-center before:w-full before:h-full border border-solid border-gray-200 rounded-lg">
+          <section className="mx-auto mt-12 w-full max-w-[60rem] space-y-4 px-5">
+            <div className="relative z-10 flex flex-row-reverse items-center overflow-hidden rounded-lg border border-solid border-gray-200 bg-white shadow-xl shadow-gray-200/70 before:absolute before:-z-10 before:h-full before:w-full before:bg-[#8AC440] before:[clip-path:polygon(50%_0%,100%_0%,100%_100%,0%_100%,25%_50%)]">
               {/* Form */}
-              <div className="w-[45%] rounded-lg shadow-2xl bg-white m-5">
-                <form className="w-full p-5 !pb-10 px-10">
+              <div className="m-5 w-[45%] rounded-lg bg-white shadow-2xl">
+                <form className="w-full p-5 px-10 !pb-10">
                   <div className="space-y-8 pt-6">
                     <label className="flex flex-col gap-1.5">
                       <span className="text-[16px] font-medium">
-                        Email{' '}
-                        <span className="text-red-600 text-lg">*</span>
+                        Email <span className="text-lg text-red-600">*</span>
                       </span>
-                      <div className="flex flex-row-reverse justify-between items-center gap-3.5 border border-gray-300  border-solid px-2.5 rounded-lg transition-all focus-within:border-gray-500/80">
+                      <div className="flex flex-row-reverse items-center justify-between gap-3.5 rounded-lg border border-solid border-gray-300 px-2.5 transition-all focus-within:border-gray-500/80">
                         <Mail
                           strokeWidth={1.5}
                           size={25}
@@ -119,32 +111,31 @@ export default function Login() {
                           type="email"
                           name="email"
                           required
-                          className="w-full outline-none ring-0  placeholder:text-gray-400/80 border-none focus:border-none focus:shadow-none box-border m-0 p-0"
+                          className="m-0 box-border w-full border-none p-0 ring-0 outline-none placeholder:text-gray-400/80 focus:border-none focus:shadow-none"
                           placeholder="Enter Email"
                         />
                       </div>
                     </label>
                     <label className="flex flex-col gap-1.5">
                       <span className="text-[16px] font-medium">
-                        Password{' '}
-                        <span className="text-red-600 text-lg">*</span>
+                        Password <span className="text-lg text-red-600">*</span>
                       </span>
-                      <div className="relative flex flex-row-reverse justify-between items-center gap-3.5 border border-gray-300  border-solid px-2.5 rounded-lg transition-all focus-within:border-gray-500/80">
+                      <div className="relative flex flex-row-reverse items-center justify-between gap-3.5 rounded-lg border border-solid border-gray-300 px-2.5 transition-all focus-within:border-gray-500/80">
                         <input
-                          type={showPassword ? 'text' : 'password'}
+                          type={showPassword ? "text" : "password"}
                           name="password"
                           minLength={8}
                           required
-                          className="w-full outline-none ring-0  placeholder:text-gray-400/80 border-none focus:border-none focus:shadow-none box-border m-0 p-0"
+                          className="m-0 box-border w-full border-none p-0 ring-0 outline-none placeholder:text-gray-400/80 focus:border-none focus:shadow-none"
                           placeholder="Enter Password"
                         />
                         <button
                           type="button"
                           aria-label={
-                            showPassword ? 'Hide password' : 'Show password'
+                            showPassword ? "Hide password" : "Show password"
                           }
                           onClick={() => setShowPassword((v) => !v)}
-                          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                          className="absolute top-1/2 right-2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                         >
                           {showPassword ? (
                             <EyeOff size={18} />
@@ -157,7 +148,7 @@ export default function Login() {
                   </div>
                   <Link
                     to="/forgot-password"
-                    className="block mt-4 text-[15px] text-right text-blue-800 w-full"
+                    className="mt-4 block w-full text-right text-[15px] text-blue-800"
                   >
                     Forgot your password?
                   </Link>
@@ -167,7 +158,7 @@ export default function Login() {
                   >
                     <button
                       type="submit"
-                      className="w-full rounded bg-[#26A7DF] py-2 font-medium uppercase text-white"
+                      className="w-full rounded bg-[#26A7DF] py-2 font-medium text-white uppercase"
                     >
                       Log In
                     </button>

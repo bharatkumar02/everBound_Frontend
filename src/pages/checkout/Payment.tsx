@@ -1,7 +1,12 @@
 import { Banknote } from "lucide-react";
 import { useState } from "react";
 
-export default function Payment({ currentStep, onContinue }) {
+interface PaymentProps {
+  currentStep: number;
+  onContinue: () => void;
+}
+
+export default function Payment({ currentStep, onContinue: _onContinue }: PaymentProps) {
   const [method, setMethod] = useState(1);
   return (
     <>
@@ -32,11 +37,11 @@ export default function Payment({ currentStep, onContinue }) {
                   <div className="mb-1 w-fit rounded-md bg-gray-50 p-1 shadow">
                     <img
                       src="/card.svg"
-                      alt="UPI"
+                      alt="Card"
                       className="w-full max-w-[2rem]"
                     />
                   </div>
-                  <span className="">Credit/Debit Card</span>
+                  <span>Credit/Debit Card</span>
                 </div>
               </li>
               <li onClick={() => setMethod(3)}>
@@ -44,7 +49,7 @@ export default function Payment({ currentStep, onContinue }) {
                   <div className="mb-1 w-fit rounded-md bg-gray-50 p-1 shadow">
                     <img
                       src="/netbanking.svg"
-                      alt="UPI"
+                      alt="Net Banking"
                       className="w-full max-w-[2rem]"
                     />
                   </div>
@@ -101,9 +106,9 @@ export default function Payment({ currentStep, onContinue }) {
                     className="flex cursor-pointer items-center gap-2.5"
                   >
                     <input type="radio" id="qrCode" name="upi" />
-                    <span>Pay By QR Code (Scan & Pay)</span>
+                    <span>Pay By QR Code (Scan &amp; Pay)</span>
                   </label>
-                  <div className="">
+                  <div>
                     <div className="mx-auto hidden w-fit rounded-md p-2 drop-shadow-md group-has-[input:checked]:block">
                       <img
                         src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg"
@@ -146,7 +151,6 @@ export default function Payment({ currentStep, onContinue }) {
                           type="text"
                           placeholder="CVV"
                         />
-                        {/* <Info size={30} className="text-gray-400" /> */}
                       </div>
                       <button className="w-full rounded-md bg-purple-700 py-2.5 text-center text-white">
                         Pay ₹800
@@ -156,18 +160,18 @@ export default function Payment({ currentStep, onContinue }) {
                       <p className="flex items-start gap-2">
                         <img
                           src="https://th.bing.com/th/id/OIP.YhDXKBtABsik5Ct6NsEkFwHaHa?rs=1&pid=ImgDetMain"
-                          alt="Card"
+                          alt="HDFC Bank"
                           className="max-w-[2rem]"
                         />
                         <span className="text-[14px]">
-                          Pay with <strong>HDFC Bank </strong>Card & Get 5%
+                          Pay with <strong>HDFC Bank </strong>Card &amp; Get 5%
                           Instant Discount!
                         </span>
                       </p>
                       <p className="flex items-start gap-2">
                         <img
                           src="https://th.bing.com/th/id/OIP.ceAXleGyAouaAYjPFVuupAHaHa?rs=1&pid=ImgDetMain"
-                          alt="Card"
+                          alt="Axis Bank"
                           className="max-w-[2rem]"
                         />
                         <span className="text-[14px]">
@@ -178,7 +182,7 @@ export default function Payment({ currentStep, onContinue }) {
                       <p className="flex items-start gap-2">
                         <img
                           src="https://th.bing.com/th/id/OIP._aj2Q7iELtIn98FMo6uhtwHaEZ?rs=1&pid=ImgDetMain"
-                          alt="Card"
+                          alt="ICICI Bank"
                           className="max-w-[2rem]"
                         />
                         <span className="text-[14px]">
@@ -205,7 +209,7 @@ export default function Payment({ currentStep, onContinue }) {
                       {" "}
                       <img
                         src="https://th.bing.com/th/id/OIP.YhDXKBtABsik5Ct6NsEkFwHaHa?rs=1&pid=ImgDetMain"
-                        alt="Card"
+                        alt="HDFC Bank"
                         className="size-[2rem] lg:size-[2.5rem]"
                       />{" "}
                       <span>HDFC Bank</span>
@@ -214,7 +218,7 @@ export default function Payment({ currentStep, onContinue }) {
                       {" "}
                       <img
                         src="https://th.bing.com/th/id/OIP.ceAXleGyAouaAYjPFVuupAHaHa?rs=1&pid=ImgDetMain"
-                        alt="Card"
+                        alt="Axis Bank"
                         className="size-[2rem] lg:size-[2.5rem]"
                       />{" "}
                       <span>Axis Bank</span>
@@ -223,7 +227,7 @@ export default function Payment({ currentStep, onContinue }) {
                       {" "}
                       <img
                         src="https://th.bing.com/th/id/OIP._aj2Q7iELtIn98FMo6uhtwHaEZ?rs=1&pid=ImgDetMain"
-                        alt="Card"
+                        alt="ICICI Bank"
                         className="size-[2rem] lg:size-[2.5rem]"
                       />{" "}
                       <span>ICICI Bank</span>
@@ -232,7 +236,7 @@ export default function Payment({ currentStep, onContinue }) {
                       {" "}
                       <img
                         src="https://th.bing.com/th/id/OIP.CdkIHp9eyZ2zHe8xOx30lwHaHw?o=7rm=3&rs=1&pid=ImgDetMain"
-                        alt="Card"
+                        alt="SBI Bank"
                         className="size-[2rem] lg:size-[2.5rem]"
                       />{" "}
                       <span>SBI Bank</span>
@@ -241,7 +245,7 @@ export default function Payment({ currentStep, onContinue }) {
                       {" "}
                       <img
                         src="https://companieslogo.com/img/orig/KOTAKBANK.NS-36440c5e.png?t=1593960269"
-                        alt="Card"
+                        alt="Kotak Mahindra Bank"
                         className="size-[2rem] lg:size-[2.5rem]"
                       />{" "}
                       <span>Kotak Mahindra Bank</span>
@@ -250,7 +254,7 @@ export default function Payment({ currentStep, onContinue }) {
                       {" "}
                       <img
                         src="https://th.bing.com/th/id/OIP.vtB6wHBzgylYucupSEpZBAHaHa?rs=1&pid=ImgDetMain"
-                        alt="Card"
+                        alt="Punjab National Bank"
                         className="size-[2rem] lg:size-[2.5rem]"
                       />{" "}
                       <span>Punjab National Bank</span>
@@ -259,7 +263,7 @@ export default function Payment({ currentStep, onContinue }) {
                       {" "}
                       <img
                         src="https://th.bing.com/th/id/OIP.YKnbDv-ChD9JhKKo_mR5kwAAAA?rs=1&pid=ImgDetMain"
-                        alt="Card"
+                        alt="Gramin Bank of Haryana"
                         className="size-[2rem] lg:size-[2.5rem]"
                       />{" "}
                       <span>Gramin Bank of Haryana</span>
@@ -268,7 +272,7 @@ export default function Payment({ currentStep, onContinue }) {
                       {" "}
                       <img
                         src="https://play-lh.googleusercontent.com/RTmfgCmNOoh97mbifT3s14MusUVdLFBb0_0Kge85MPob0cmhyiikN_thf2FnGSOb4X8-"
-                        alt="Card"
+                        alt="Federal Bank"
                         className="size-[2rem] lg:size-[2.5rem]"
                       />{" "}
                       <span>Federal Bank</span>

@@ -1,8 +1,9 @@
 import { Minus } from "lucide-react";
+
 export default function Filter() {
   return (
     <>
-      <section className=" hidden min-w-[19rem] space-y-5 text-[15px] lg:block">
+      <section className="hidden min-w-[19rem] space-y-5 text-[15px] lg:block">
         {/* Category */}
         <div className="rounded-md bg-white p-7 shadow">
           <h3 className="relative mb-9 text-[17px] font-medium before:absolute before:-bottom-[13px] before:left-0 before:z-20 before:h-1 before:w-[40%] before:rounded-full before:bg-purple-700 after:absolute after:-bottom-3 after:left-0 after:z-10 after:h-[3px] after:w-full after:rounded-full after:bg-gray-100">
@@ -176,8 +177,8 @@ export default function Filter() {
             <div className="pt-7">
               <input
                 type="range"
-                name=""
-                id=""
+                id="price-range-desktop"
+                name="price-range-desktop"
                 className="w-full cursor-grab active:cursor-grabbing"
               />
             </div>
